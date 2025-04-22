@@ -7,10 +7,12 @@ public class NPC_Behaviour : MonoBehaviour
     
     public GameObject FishDialogue;
     public bool DialogueOver = false;
+    public GameObject Anger;
     // Start is called before the first frame update
     void Start()
     {
         FishDialogue.SetActive(false);
+        
     }
 
     // Update is called once per frame

@@ -8,6 +8,7 @@ public class AIBehavior : MonoBehaviour
 {
     //public GameObject patrolPathObj;
     private NavMeshAgent nav;
+    private Rigidbody rb;
     private Vector2 moveInput;
     public GameObject GameOverScreen;
     private Transform player;
@@ -26,6 +27,7 @@ public class AIBehavior : MonoBehaviour
 
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         nav = GetComponent<NavMeshAgent>();
         GameObject playerObject = GameObject.FindWithTag("Player");
         player = playerObject.transform;
@@ -62,6 +64,10 @@ public class AIBehavior : MonoBehaviour
     public void MoveTo(Vector3 destination)
     {
         GetComponent<NavMeshAgent>().destination = destination;
+        //Vector3 direction = (player.position - transform.position).normalized;
+        //rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
+        //transform.LookAt(player);
+
         nav.isStopped = false;
     }
 
@@ -88,6 +94,7 @@ public class AIBehavior : MonoBehaviour
 
     void Patrol()
     {
+        
         MoveTo(path.GetWaypoint(CurrentWaypoint));
         if (AtWaypoint())
         {
