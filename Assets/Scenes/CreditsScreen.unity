@@ -304,7 +304,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d8b0cdbc1bd685e4a8326d046fb22270, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -438,8 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bec9f1b2fe77094bbf9e50f5784145d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CreditsScreen: {fileID: 0}
-  startMenu: {fileID: 0}
+  GameOverScreen: {fileID: 0}
 --- !u!1 &1652763959
 GameObject:
   m_ObjectHideFlags: 0
